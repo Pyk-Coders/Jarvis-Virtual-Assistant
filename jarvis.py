@@ -16,7 +16,7 @@ from win32com.client import Dispatch
 from words import word_list
 ###################################################################
 def NewsFromBBC(): 
-    main_url = " https://newsapi.org/v1/articles?source=bbc-news&sortBy=top&apiKey=4dbc17e007ab436fb66416009dfb59a8"
+    main_url = " https://newsapi.org/v1/articles?source=bbc-news&sortBy=top&apiKey=YOUR API KEY"
     open_bbc_page = requests.get(main_url).json() 
     article = open_bbc_page["articles"] 
     results = []   
@@ -449,7 +449,7 @@ if __name__ == '__main__':
             print(calendar.month(yy, mm))
 
         elif 'current weather' in query:
-            api_key = "858771e835bded9c1355767960d3b3c9"  
+            api_key = "OPEN WEATHER API KEY"  
             base_url = "http://api.openweathermap.org/data/2.5/weather?"   
             city_name = input("Enter city name : ")   
             complete_url = base_url + "appid=" + api_key + "&q=" + city_name   
@@ -532,8 +532,8 @@ if __name__ == '__main__':
             server = smtplib.SMTP('smtp.gmail.com', 587)
             server.ehlo()
             server.starttls()
-            server.login("bunnyjoepy@gmail.com", password)
-            server.sendmail('bunnyjoepy@gmail.com', resipient, content)
+            server.login("YOUR EMAIL", password)
+            server.sendmail('YOUR EMAIL', resipient, content)
             server.close()
             speak('Email sent!')
 
